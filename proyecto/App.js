@@ -16,6 +16,7 @@ import PerfileUScreen from './screens/PerfilUScreen';
 import RegistroScreen from './screens/registroScreen';
 import ReportesScreen from './screens/ReportesScreen';
 import SolicitarServiciosScreen from './screens/SolicitarServiciosScreen';
+import SolicitudesRecibidasScreen from './screens/SolicitudesRecibidasScreen';
 
 export default function App() {
   const [screen, setScreen] = useState('menu');
@@ -51,6 +52,8 @@ export default function App() {
       return <SafeAreaProvider><CalificarServiciosScreen /></SafeAreaProvider>;
     case 'reportes':
       return <SafeAreaProvider><ReportesScreen /></SafeAreaProvider>;
+    case 'solicitudesRecibidas':
+      return <SafeAreaProvider><SolicitudesRecibidasScreen /></SafeAreaProvider>;
     case 'menu':
     default:
       return (
@@ -72,6 +75,7 @@ export default function App() {
             <Button title="Administrar calificaciones" onPress={() => setScreen('administrarCalificaciones')} />
             <Button title="Calificar servicios" onPress={() => setScreen('calificarServicios')} />
             <Button title="Reportes" onPress={() => setScreen('reportes')} />
+            <Button title="Solicitudes recibidas" onPress={() => setScreen('solicitudesRecibidas')} />
           </View>
         </SafeAreaProvider>
       );
